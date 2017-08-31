@@ -106,4 +106,37 @@ let g:EasyMotion_smartcase = 1
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
-execute pathogen#infect()
+
+"Easy Align settings
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+
+"ArgWrap settings
+nnoremap <silent> <leader>a :ArgWrap<CR>
+
+
+
+"Vim Plugin
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+Plug 'altercation/vim-colors-solarized'
+
+Plug 'easymotion/vim-easymotion'
+
+Plug 'airblade/vim-gitgutter'
+
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
+Plug 'sjl/gundo.vim'
+
+Plug 'junegunn/vim-easy-align'
+
+Plug 'FooSoft/vim-argwrap'
+
+Plug 'jiangmiao/auto-pairs'
+
+call plug#end()
